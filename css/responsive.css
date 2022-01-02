@@ -1,0 +1,27 @@
+@media screen and (max-width:1000px) {
+    nav{
+        flex-direction: column;
+        height: 22vh;
+        background-color: var(#2874f0);
+    }
+    .logo{
+        justify-content: center;
+    }
+    nav ul{
+        justify-content: center;
+        height: 26px;
+    }
+    .search{
+        justify-content: center;
+    }
+    .search input{
+        justify-content: center;
+    }
+    .button{
+        justify-content: center;
+    }
+    .slider{
+        height: 20vh;
+        margin: 40px;
+    }
+}
