@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+
+            body{
+                background-color: azure;
+            }
+form{
+    padding: 60px 40px;
+    width: 350px;
+    background-color: rgb(93, 102, 99);
+    margin: 190px 50px 50px 200px;
+  text-align: center;
+}
+label{
+    font-size: 20px;
+    line-height: 30px;
+}
+input[type="number"]{
+   
+    padding: 3px;
+    width: 100px;
+    
+    }
+    input[type="submit"]{
+   
+   padding: 3px;
+   width: 82px;
+   margin-top: 10px;
+   background-color: aquamarine;
+   
+   }
+   #temp-diff{
+     padding: 4px;
+     margin-left: 10px;
+     background-color: antiquewhite;
+   }
+
+    
+        </style>
+    </head>
+    <body> 
+<form id="temp" onsubmit="calculateTemp(); return false ">
+    <label for="temp">Plz enter the temperture you like convert. </label><br>
+    <input type="number" name="temp" id="tempp">
+    <select name="temp-diff" id="temp-diff">
+        <option value="fal">Fahrenheit</option>
+        <option value="cel">Celsius</option>
+    </select><br>
+    <input type="submit" name="temp"><br>
+    <span id="resultcontainer"></span>
+</form> 
+    </body>
+    <script>
+         const calculateTemp=()=>{
+
+            const temnumber=document.getElementById('tempp').value;
+            const tempSelected=document.getElementById('temp_diff');
+           const valuetemp= temp_diff.options[tempSelected.selectedIndex].value;
+           
+         const celtoFah=(cel)=>{
+            let Fahrenheit=Math.round((cel*9/5)+32);
+            return Fahrenheit;
+         }
+
+         const Fahtcel=(Fahr)=>{
+            let celsius=Math.round((Fahr - 32) 5/9 32);
+            return Fahrenheit;
+         }
+           
+           
+           var result;
+
+
+
+           if(valuetemp == 'cel'){
+            result= celtoFah(temnumber);
+            document.getElementById('resultcontainer').innerHTML=`=${result} Fahrenhei`;
+           }else{
+            result=Fahtcel(temnumber);
+            document.getElementById('resultcontainer').innerHTML=`=${result} celsius`;
+           }
+         }
+        
+    </script>
+</html>
+
+
+
+
+
+// <script>
+//           const  calculateTemp=()=>{
+
+//             const numbertemp=document.getElementById('tempp').value;
+
+//             const tempdiff=document.getElementById('temp-diff').value;
+//              const valuetemp=temp-diff.options[tempselectedIndex].value
+            
+//            const celtofah=(cel)=>{
+//             let Fahrenheit=math.round((cel*9/5)+32);
+//             return Fahrenheit;
+//            }
+
+//              let result;
+ 
+//              if(valuetemp == 'cel'){
+//                 result=celtofah(numbertemp);
+//                 document.getElementById('resultcontainer').innerHTML=`${result}Fahrenheit`
+
+//              }else{
+//                 result=faltocel(numbertemp);
+//                 document.getElementById('resultcontainer').innerHTML=`${result}Celsius`   
+//              }
+//           }
+         
+    // </script>
